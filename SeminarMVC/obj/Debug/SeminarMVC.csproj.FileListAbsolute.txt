@@ -77,6 +77,5 @@ C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSemin
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.csprojResolveAssemblyReference.cache
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.pdb
