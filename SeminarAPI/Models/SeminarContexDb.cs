@@ -10,6 +10,8 @@ namespace SeminarAPI.Models
         public SeminarContexDb()
             : base("name=SeminarDB")
         {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Predbiljezba> Predbiljezbas { get; set; }
