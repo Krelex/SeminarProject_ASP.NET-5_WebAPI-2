@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeminarAPI", "SeminarAPI\SeminarAPI.csproj", "{61784731-8C34-4854-B934-FD4CAA55168E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeminarMVC", "SeminarMVC\SeminarMVC.csproj", "{48E9A4DC-3CE5-43CF-A0E1-B0713A3D462A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{61784731-8C34-4854-B934-FD4CAA55168E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61784731-8C34-4854-B934-FD4CAA55168E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61784731-8C34-4854-B934-FD4CAA55168E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E9A4DC-3CE5-43CF-A0E1-B0713A3D462A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E9A4DC-3CE5-43CF-A0E1-B0713A3D462A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E9A4DC-3CE5-43CF-A0E1-B0713A3D462A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E9A4DC-3CE5-43CF-A0E1-B0713A3D462A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
