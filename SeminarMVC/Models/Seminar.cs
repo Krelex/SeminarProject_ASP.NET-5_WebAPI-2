@@ -16,10 +16,13 @@ namespace SeminarMVC.Models
 
         public int IdSeminar { get; set; }
 
+        [Required(ErrorMessage = "Unesite Naziv")]
         public string Naziv { get; set; }
 
+        [Required(ErrorMessage = "Unesite Opis")]
         public string Opis { get; set; }
 
+        [Required(ErrorMessage = "Unesite Datum")]
         public DateTime Datum { get; set; }
 
         public bool Popunjen { get; set; }

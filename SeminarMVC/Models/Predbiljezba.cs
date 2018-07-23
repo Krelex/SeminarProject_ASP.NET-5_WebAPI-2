@@ -8,22 +8,24 @@ namespace SeminarMVC.Models
 {
     public class Predbiljezba
     {
-
         public int IdPredbiljezba { get; set; }
 
+        [Required(ErrorMessage = "Unesite Datum")]
         public DateTime Datum { get; set; }
 
+        [Required(ErrorMessage = "Unesite Ime")]
         public string Ime { get; set; }
 
-
+        [Required(ErrorMessage = "Unesite Prezime")]
         public string Prezime { get; set; }
 
-
+        [Required(ErrorMessage = "Unesite Adresa")]
         public string Adresa { get; set; }
 
-
+        [Required(ErrorMessage = "Unesite Email")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Unesite Telefon")]
         public string Telefon { get; set; }
 
         public bool Active { get; set; }
