@@ -1,9 +1,10 @@
-﻿
+﻿@model IEnumerable<SeminarMVC.Models.Seminar>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Upis";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title :</h2>
 
 <table class="table table-bordered">
     <thead>
@@ -15,5 +16,26 @@
             <td>Datum</td>
         </tr>
     </thead>
+    <tbody>
+        @foreach (var seminar in Model)
+        {
+            <tr>
+                <td>
+                    <a>
+                        Odaberi
+                    </a>
+                </td>
+                <td>
+                    @seminar.Naziv
+                </td>
+                <td>
+                    @seminar.Opis
+                </td>
+                <td>
+                    @seminar.Datum.ToShortDateString()
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
 

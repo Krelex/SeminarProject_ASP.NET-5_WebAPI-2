@@ -1,21 +1,43 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿@model IEnumerable<SeminarMVC.Models.Seminar>
 
-<h2>Index</h2>
+    @{
+        ViewBag.Title = "Index";
+    }
 
-<a class="btn btn-primary btn-lg" href="~/Seminar/Create">Novi</a>
+    <h2>Index</h2>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td></td>
-            <td>Naziv</td>
-            <td>Opis</td>
-            <td>Datum</td>
-            <td>Popunjen</td>
-            <td>Broj Polaznika</td>
-        </tr>
-    </thead>
-</table>
+    <a class="btn btn-primary btn-lg" href="~/Seminar/Create">Novi</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td></td>
+                <td>Naziv</td>
+                <td>Opis</td>
+                <td>Datum</td>
+                <td>Popunjen</td>
+                <td>Broj Polaznika</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var seminar in Model)
+            {
+                <tr>
+                    <td>
+                        <a>
+                            Odaberi
+                        </a>
+                    </td>
+                    <td>
+                        @seminar.Naziv
+                    </td>
+                    <td>
+                        @seminar.Opis
+                    </td>
+                    <td>
+                        @seminar.Datum
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
