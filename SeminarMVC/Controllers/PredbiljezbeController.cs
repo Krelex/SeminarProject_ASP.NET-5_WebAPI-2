@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace SeminarMVC.Controllers
 {
+    [Authorize]
     public class PredbiljezbeController : Controller
     {
         // GET: Predbiljezbe
