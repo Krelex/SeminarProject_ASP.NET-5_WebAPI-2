@@ -64,16 +64,16 @@ namespace SeminarMVC.Models
     public class RegisterViewModel
     {
 
-        [Required]
+        [Required(ErrorMessage = "Unesite Username")]
         [Display(Name = "Username")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Unesite Email")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Unesite Password")]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

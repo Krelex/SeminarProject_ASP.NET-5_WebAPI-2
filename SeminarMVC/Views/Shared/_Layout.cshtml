@@ -6,6 +6,10 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .move{
+            margin-top: 10px;        }
+    </style>
 
 </head>
 <body>
@@ -28,11 +32,11 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content move">
         @RenderBody()
         <hr />
         <footer class="text-center">
-            <p>MVC Algebra Seminar © Filip Cogelja - @DateTime.Now.Year</p>
+            <p>MVC Algebra Seminar © <a href="https://github.com/Krelex">Filip Cogelja</a> - @DateTime.Now.Year</p>
         </footer>
     </div>
 

@@ -23,6 +23,7 @@ namespace SeminarMVC.Models
         public string Adresa { get; set; }
 
         [Required(ErrorMessage = "Unesite Email")]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Unesite Telefon")]

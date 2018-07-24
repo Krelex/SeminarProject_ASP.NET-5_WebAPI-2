@@ -292,6 +292,7 @@
     <Content Include="Views\Upisi\Index.cshtml" />
     <Content Include="Views\Predbiljezbe\Index.cshtml" />
     <Content Include="Views\Seminari\Index.cshtml" />
+    <Content Include="Views\Upisi\Korisnika.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -37,7 +37,7 @@ namespace SeminarMVC.Models.REST
         {
             using (var client = new HttpClient())
             {
-                var rezult = JsonConvert.SerializeObject(await client.PostAsJsonAsync(uri + "Predbiljezbas", predbiljezba));
+                var rezult = JsonConvert.SerializeObject( await client.PostAsJsonAsync(uri + "Predbiljezbas", predbiljezba));
 
                
                 return predbiljezba;

@@ -1,0 +1,78 @@
+﻿@model SeminarMVC.Models.Predbiljezba
+
+@{
+    ViewBag.Title = "Korisnika";
+}
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Upisite se na <a style="color:red">@ViewBag.name</a> seminar!</h4>
+                <hr />
+                @if (ViewBag.Error != null)
+                {
+                    <span class="text-danger">@ViewBag.Error</span>
+                }
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <input type="hidden" name="IdSeminar" value="@ViewBag.SeminarId" />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Ime, htmlAttributes: new { @class = "col-md-4 col-xs-4 control-label" })
+                    <div class="col-md-8 col-xs-8">
+                        @Html.EditorFor(model => model.Ime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Ime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Prezime, htmlAttributes: new { @class = "col-md-4 col-xs-4 control-label" })
+                    <div class="col-md-8 col-xs-8">
+                        @Html.EditorFor(model => model.Prezime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Prezime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Adresa, htmlAttributes: new { @class = "col-md-4 col-xs-4 control-label" })
+                    <div class="col-md-8 col-xs-8">
+                        @Html.EditorFor(model => model.Adresa, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Adresa, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "col-md-4 col-xs-4 control-label" })
+                    <div class="col-md-8 col-xs-8">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefon, htmlAttributes: new { @class = "col-md-4 col-xs-4 control-label" })
+                    <div class="col-md-8 col-xs-8">
+                        @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Telefon, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class=" col-md-12">
+                        <input type="submit" value="Create" class="btn btn-default" /> | <a href="~/Upisi/index"> Back to Upis </a>
+                    </div>
+                    
+                        
+                    
+                </div>
+            </div>
+        }
+
+        
+    </div>
+</div>
+
+
