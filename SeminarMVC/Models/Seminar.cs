@@ -1,9 +1,10 @@
+using SeminarMVC.Models.REST;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Spatial;
-
+using System.Threading.Tasks;
 
 namespace SeminarMVC.Models
 {
@@ -28,6 +29,15 @@ namespace SeminarMVC.Models
         public bool Popunjen { get; set; }
 
         public virtual ICollection<Predbiljezba> Predbiljezbas { get; set; }
+
+        public string Broj()
+        {
+            PredbiljezbaREST service = new PredbiljezbaREST();
+
+            string rezulat =   service.BrojPolaznikaAsync(this.IdSeminar).Result;
+
+            return rezulat;
+        }
     }
 }
 

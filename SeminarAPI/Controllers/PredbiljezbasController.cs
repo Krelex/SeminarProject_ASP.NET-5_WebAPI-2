@@ -17,6 +17,7 @@ namespace SeminarAPI.Controllers
         private SeminarContexDb db = new SeminarContexDb();
 
         // GET: api/Predbiljezbas
+        [HttpGet]
         public IQueryable<Predbiljezba> GetPredbiljezbas()
         {
             return db.Predbiljezbas;
@@ -99,6 +100,16 @@ namespace SeminarAPI.Controllers
             db.SaveChanges();
 
             return Ok(predbiljezba);
+        }
+
+        [ResponseType(typeof(int))]
+        [Route("~/api/Predbiljezbas/{Id}/PolaznikaCount")]
+        [HttpGet]
+        public IHttpActionResult BrojPolaznika(int id)
+        {
+            int broj = db.Database.SqlQuery<int>("SELECT COUNT (IdSeminar) FROM Predbiljezba WHERE IdSeminar =" + id).SingleOrDefault();    
+
+            return Ok(broj);
         }
 
         protected override void Dispose(bool disposing)

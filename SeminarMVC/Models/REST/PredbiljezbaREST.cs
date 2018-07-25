@@ -63,5 +63,15 @@ namespace SeminarMVC.Models.REST
                 return rezult;
             }
         }
+
+        public async Task<string> BrojPolaznikaAsync(int Id)
+        {
+            using (var client = new HttpClient())
+            {
+                var rezult =  client.GetStringAsync(uri + "Predbiljezbas/" + Id + "/PolaznikaCount").Result;
+
+                return rezult;
+            }
+        }
     }
 }

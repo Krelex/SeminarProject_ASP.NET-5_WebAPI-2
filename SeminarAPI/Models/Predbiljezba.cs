@@ -39,5 +39,7 @@ namespace SeminarAPI.Models
         public int? IdSeminar { get; set; }
 
         public virtual Seminar Seminar { get; set; }
+
+
     }
 }

@@ -4,9 +4,10 @@
     ViewBag.Title = "Upis";
 }
 
-<h2>@ViewBag.Title :</h2>
+<h4 class="text-center">Seminari sa slobodnim mjestima.</h4>
+<hr />
 
-<table class="table table-bordered">
+<table class="table table-striped table-bordered">
     <thead>
         <tr>
             <td>
@@ -14,6 +15,7 @@
             <td>Naziv</td>
             <td>Opis</td>
             <td>Datum</td>
+            <td class="text-center">Broj slobodnih mjesta</td>
         </tr>
     </thead>
     <tbody>
@@ -33,6 +35,9 @@
                 </td>
                 <td>
                     @seminar.Datum.ToShortDateString()
+                </td>
+                <td class="text-center">
+                    @seminar.Broj() / 30
                 </td>
             </tr>
         }
