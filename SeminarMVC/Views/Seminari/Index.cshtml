@@ -2,31 +2,38 @@
 
     @{
         ViewBag.Title = "Index";
+        string check = ""; 
     }
 
-    <h2>Index</h2>
-
-    <a class="btn btn-primary btn-lg" href="~/Seminar/Create">Novi</a>
+    <h4 class="text-center">Popis svih seminara.</h4>
+    <hr />
+    
+    <div class="text-center">
+         <a style="margin-bottom: 15px" class="btn btn-primary btn" href="~/Seminar/Create">Novi Seminar</a> 
+    </div>
 
     <table class="table table-bordered">
         <thead>
             <tr>
-                <td></td>
+                <td class="text-center">Akcija</td>
                 <td>Naziv</td>
                 <td>Opis</td>
                 <td>Datum</td>
                 <td>Popunjen</td>
-                <td>Broj Polaznika</td>
+                <td class="text-center">Broj Polaznika</td>
             </tr>
         </thead>
         <tbody>
             @foreach (var seminar in Model)
             {
                 <tr>
-                    <td>
-                        <a>
-                            Odaberi
-                        </a>
+                    <td class="text-center">
+                        <div class="btn-group" role="group">
+                            <a href="~/Seminar/Edit/@seminar.IdSeminar" class="btn btn-warning">
+                                Uredi
+                            </a>
+                            <a href="~/Seminar/Delete/@seminar.IdSeminar" class="btn btn-danger"> Obriši</a>
+                        </div>
                     </td>
                     <td>
                         @seminar.Naziv
@@ -35,7 +42,16 @@
                         @seminar.Opis
                     </td>
                     <td>
-                        @seminar.Datum
+                        @seminar.Datum.ToShortDateString()
+                    </td>
+                    <td class="text-center">
+                        @if (seminar.Popunjen == true)
+                        { check = "checked";  }
+                        else { check = ""; }
+                        <input type="checkbox" name="Popunjen" value="@seminar.Popunjen" disabled @check  />
+                    </td>
+                    <td class="text-center">
+                        @seminar.Broj()
                     </td>
                 </tr>
             }
