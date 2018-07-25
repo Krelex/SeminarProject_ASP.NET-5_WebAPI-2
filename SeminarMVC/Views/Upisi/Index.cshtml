@@ -14,7 +14,7 @@
             </td>
             <td>Naziv</td>
             <td>Opis</td>
-            <td>Datum</td>
+            <td class="text-center">Datum</td>
             <td class="text-center">Broj slobodnih mjesta</td>
         </tr>
     </thead>
@@ -33,11 +33,11 @@
                 <td>
                     @seminar.Opis
                 </td>
-                <td>
+                <td class="text-center">
                     @seminar.Datum.ToShortDateString()
                 </td>
                 <td class="text-center">
-                    @seminar.Broj() / 30
+                    @seminar.Broj() / 5
                 </td>
             </tr>
         }

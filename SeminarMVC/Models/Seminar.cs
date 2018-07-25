@@ -38,6 +38,22 @@ namespace SeminarMVC.Models
 
             return rezulat;
         }
+
+        public bool PopunjenCheck()
+        {
+            if(int.Parse(this.Broj()) >= 5)
+            {
+                SeminarREST service = new SeminarREST();
+                this.Popunjen = true;
+                service.PutAsync(this);
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
 
