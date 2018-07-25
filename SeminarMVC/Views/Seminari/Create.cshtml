@@ -1,0 +1,51 @@
+﻿@model SeminarMVC.Models.Seminar
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4 class="text-center">Dodajte novi seminar.</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Naziv, htmlAttributes: new { @class = "control-label col-md-5 col-xs-4" })
+            <div class="col-md-7 col-xs-8">
+                @Html.EditorFor(model => model.Naziv, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Naziv, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Opis, htmlAttributes: new { @class = "control-label col-md-5 col-xs-4" })
+            <div class="col-md-7 col-xs-8">
+                <textarea class="form-control" id="Opis" rows=" 6" name="Opis"></textarea>
+                @Html.ValidationMessageFor(model => model.Opis, "", new { @class = "text-danger" })
+            </div>
+        </div>
+         
+        <div class="form-group">
+            @Html.LabelFor(model => model.Datum, htmlAttributes: new { @class = "control-label col-md-5 col-xs-4 "})
+            <div class="col-md-7 col-xs-8">
+                @Html.EditorFor(model => model.Datum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Datum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5 col-md-8">
+                <input type="submit" value="Create" class="btn btn-success" />
+                | <a href="~/Seminari/Index" class="btn btn-default"> Back </a>
+            </div> 
+        </div>
+    </div>
+}
+
+

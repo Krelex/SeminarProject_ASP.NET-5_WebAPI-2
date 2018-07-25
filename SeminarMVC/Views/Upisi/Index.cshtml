@@ -10,7 +10,8 @@
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
-            <td>
+            <td class="text-center">
+                Akcija
             </td>
             <td>Naziv</td>
             <td>Opis</td>
@@ -22,9 +23,9 @@
         @foreach (var seminar in Model)
         {
             <tr>
-                <td>
-                    <a href="~/Upisi/Korisnika/@seminar.IdSeminar?name=@seminar.Naziv" >
-                        Odaberi
+                <td class="text-center">
+                    <a href="~/Upisi/Korisnika/@seminar.IdSeminar?name=@seminar.Naziv" class="btn btn-success">
+                        Upisi
                     </a>
                 </td>
                 <td>

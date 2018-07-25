@@ -36,13 +36,20 @@ namespace SeminarMVC.Controllers
 
         public ActionResult Create()
         {
-
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create(Seminar seminar )
+        public async Task<ActionResult> Create(Seminar seminar )
         {
+            if (ModelState.IsValid)
+            {
+                await serviceSeminar.CreateAsync(seminar);
+
+                TempData["Seminar"] = seminar.Naziv;
+
+                return RedirectToAction("Index");
+            }
 
             return View();
         }
