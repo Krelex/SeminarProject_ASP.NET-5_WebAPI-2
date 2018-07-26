@@ -55,17 +55,14 @@ namespace SeminarAPI.Controllers
 
         // PUT: api/Seminar/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult Put(int id, Seminar seminar)
+        public IHttpActionResult Put([FromBody]Seminar seminar)
         {
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != seminar.IdSeminar)
-            {
-                return BadRequest();
-            }
 
             db.Entry(seminar).State = EntityState.Modified;
 
@@ -75,7 +72,7 @@ namespace SeminarAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SeminarExists(id))
+                if (!SeminarExists(seminar.IdSeminar))
                 {
                     return NotFound();
                 }

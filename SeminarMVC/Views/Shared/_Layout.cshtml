@@ -33,6 +33,25 @@
             <a href="#" class="alert-link normaled"> Uspjesno ste se kreirali seminar <span class="bolded">@TempData["Seminar"]</span>!</a>
         </div>
     }
+    @if (TempData["Delete"] != null)
+    {
+        <div class="alert alert-danger text-center">
+            <a href="#" class="alert-link normaled"> Uspjesno ste obrisali seminar <span class="bolded">@TempData["Delete"]</span>!</a>
+        </div>
+    }
+    @if (TempData["Edit"] != null)
+    {
+        <div class="alert alert-warning text-center">
+            <a href="#" class="alert-link normaled"> Uspjesno ste editirali seminar <span class="bolded">@TempData["Edit"]</span>!</a>
+        </div>
+    }
+    @if (TempData["StatusCode"] != null)
+    {
+        <div class="alert alert-danger text-center">
+            <a href="#" class="alert-link normaled"><span class="bolded">@TempData["StatusCode"]</span>!</a>
+        </div>
+    }
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">

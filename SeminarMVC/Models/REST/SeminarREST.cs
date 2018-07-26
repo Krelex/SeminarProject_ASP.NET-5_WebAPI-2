@@ -44,13 +44,15 @@ namespace SeminarMVC.Models.REST
             }
         }
 
-        public async Task<Seminar> PutAsync(Seminar seminar)
+        public async Task<HttpResponseMessage> PutAsync(Seminar seminar)
         {
             using (var client = new HttpClient())
             {
-                var rezult = JsonConvert.SerializeObject(await client.PutAsJsonAsync(uri + "Seminar/" + seminar.IdSeminar, seminar));
+                HttpResponseMessage respone;
 
-                return seminar;
+                var rezult = JsonConvert.SerializeObject(respone = await client.PutAsJsonAsync(uri + "Seminar/" + seminar.IdSeminar , seminar));
+
+                return respone;
             }
         }
 

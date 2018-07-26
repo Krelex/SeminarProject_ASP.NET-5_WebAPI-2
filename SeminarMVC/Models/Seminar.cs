@@ -39,13 +39,15 @@ namespace SeminarMVC.Models
             return rezulat;
         }
 
-        public bool PopunjenCheck()
+        public async Task<bool> PopunjenCheck()
         {
             if(int.Parse(this.Broj()) >= 5)
             {
                 SeminarREST service = new SeminarREST();
+
                 this.Popunjen = true;
-                service.PutAsync(this);
+
+                await service.PutAsync(this);
 
                 return true;
             }

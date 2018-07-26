@@ -2,7 +2,8 @@
 
     @{
         ViewBag.Title = "Index";
-        string check = ""; 
+        string check = "";
+        string color = ""; 
     }
 
     <h4 class="text-center">Popis svih seminara.</h4>
@@ -26,13 +27,17 @@
         <tbody>
             @foreach (var seminar in Model)
             {
-                <tr>
+                if (seminar.Popunjen == true)
+                { color = "#f9f9f9"; }
+                else { color = ""; }
+
+                <tr style= "background-color : @color">
                     <td class="text-center">
                         <div class="btn-group" role="group">
-                            <a href="~/Seminar/Edit/@seminar.IdSeminar" class="btn btn-warning">
+                            <a href="~/Seminari/Edit/@seminar.IdSeminar" class="btn btn-warning">
                                 Uredi
                             </a>
-                            <a href="~/Seminar/Delete/@seminar.IdSeminar" class="btn btn-danger"> Obriši</a>
+                            <a href="~/Seminari/Delete/@seminar.IdSeminar?naziv=@seminar.Naziv" class="btn btn-danger obrisi"> Obriši</a>
                         </div>
                     </td>
                     <td>
@@ -57,3 +62,14 @@
             }
         </tbody>
     </table>
+
+<script>
+    var element = document.querySelectorAll('.obrisi');
+
+    var confirmIt = function (e) {
+        if (!confirm('Dali ste sigurni da zelite obrisati seminar?')) { e.preventDefault(); }
+    };
+
+    for (var i = 0; i < element.length; i++)
+    {element[i].addEventListener('click', confirmIt , false) }
+</script>

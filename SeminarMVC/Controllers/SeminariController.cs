@@ -24,14 +24,37 @@ namespace SeminarMVC.Controllers
             return View(all);
         }
 
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var seminar = await serviceSeminar.GetByIdAsync(id);
+
+            return View(seminar);
         }
 
-        public ActionResult Edit(Seminar seminar)
+        [HttpPost]
+        public async Task<ActionResult> Edit(Seminar seminar)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                if (int.Parse(seminar.Broj()) >= 5)
+                {
+                    seminar.Popunjen = true;
+                }
+
+                var respone = await serviceSeminar.PutAsync(seminar);
+
+                if(respone.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    TempData["Edit"] = seminar.Naziv;
+                }else
+                {
+                    TempData["StatusCode"] = "Dogodila se pogreska prilikom spremanja molimo vas pokusajte ponovo! ["+respone.StatusCode+"]";
+                }
+
+                return RedirectToAction("Index");
+            }
+
+            return View(seminar);
         }
 
         public ActionResult Create()
@@ -54,10 +77,14 @@ namespace SeminarMVC.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Delete(int id)
+        [HttpGet]
+        public ActionResult Delete(int id, string naziv)
         {
-            return View();
+            serviceSeminar.DeleteAsync(id);
+
+            TempData["Delete"] = naziv;
+
+            return RedirectToAction("Index");
         }
 
 
