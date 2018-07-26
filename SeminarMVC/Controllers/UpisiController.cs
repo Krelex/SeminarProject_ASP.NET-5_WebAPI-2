@@ -35,7 +35,7 @@ namespace SeminarMVC.Controllers
         [HttpPost]
         public async Task<ActionResult> Korisnika(Predbiljezba predbiljezba)
         {
-            predbiljezba.Active = true;
+            predbiljezba.Active = false;
 
             predbiljezba.Datum = DateTime.Now;
 

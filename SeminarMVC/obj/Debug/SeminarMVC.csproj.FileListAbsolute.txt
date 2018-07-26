@@ -86,3 +86,4 @@ C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSemin
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.WebRequest.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.WebRequest.xml
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.csprojResolveAssemblyReference.cache

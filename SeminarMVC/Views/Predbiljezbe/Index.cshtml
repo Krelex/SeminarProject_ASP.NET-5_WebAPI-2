@@ -1,22 +1,84 @@
-﻿
+﻿@model IEnumerable<SeminarMVC.Models.Predbiljezba>
 @{
     ViewBag.Title = "Index";
-}
+    var check ="";
+    string all ="";
+    string active= "";
+    string nonactive ="";
 
-<h2>Index</h2>
+    if(ViewBag.Active == "all")
+    {
+        all = "active";
+
+    }else if(ViewBag.Active == "active")
+    {
+        active = "active";
+    }
+    else if(ViewBag.Active == "nonactive")
+    {
+        nonactive = "active";
+    }
+
+   }
+
+<h4 class="text-center">Popis predbilježbi.</h4>
+<hr />
+<div class="btn-group btn-group-justified" role="group" >
+    <a class="btn btn-default @all" href="~/Predbiljezbe/Index" >All</a>
+    <a class="btn btn-default @active" href="~/Predbiljezbe/index?active=1">Active</a>
+    <a class="btn btn-default @nonactive" href="~/Predbiljezbe/index?active=0">Non Acitve</a>
+</div>
+<hr />
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <td></td>
+            <td class="text-center">Action</td>
             <td>Seminar</td>
             <td>Ime</td>
             <td>Prezime</td>
-            <td>Datum</td>
+            <td class="text-center">Datum</td>
             <td>Adresa</td>
             <td>Email</td>
             <td>Telefon</td>
-            <td>Status</td>
+            <td class="text-center">Status</td>
         </tr>
     </thead>
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td class="text-center">
+                    <a href="~/Predbiljezbe/edit/@item.IdPredbiljezba" class="btn btn-warning">Uredi</a>
+                </td>
+                <td>
+                    @item.Seminar.Naziv
+                </td>
+                <td>
+                    @item.Ime
+                </td>
+                <td>
+                    @item.Prezime
+                </td>
+                <td class="text-center">
+                    @item.Datum.ToShortDateString()
+                </td>
+                <td>
+                    @item.Adresa
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Telefon
+                </td>
+                <td class="text-center">
+                    @if (item.Active == true)
+                    { check = "checked"; }
+                    else { check = ""; }
+                    <input type="checkbox" name="Popunjen"  disabled @check />
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

@@ -18,9 +18,10 @@ namespace SeminarAPI.Controllers
 
         // GET: api/Predbiljezbas
         [HttpGet]
-        public IQueryable<Predbiljezba> GetPredbiljezbas()
+        public List<Predbiljezba> GetPredbiljezbas()
         {
-            return db.Predbiljezbas;
+            var all = db.Predbiljezbas.Include("Seminar").ToList();
+            return all;
         }
 
         // GET: api/Predbiljezbas/5
