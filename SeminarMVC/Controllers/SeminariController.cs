@@ -11,6 +11,7 @@ namespace SeminarMVC.Controllers
 {
 
     [Authorize]
+    [HandleError]
     public class SeminariController : Controller
     {
 

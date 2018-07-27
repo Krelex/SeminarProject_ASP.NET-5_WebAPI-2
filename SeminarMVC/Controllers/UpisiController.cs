@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace SeminarMVC.Controllers
 {
+    [HandleError]
     public class UpisiController : Controller
     {
         SeminarREST clientSeminar = new SeminarREST();

@@ -10,6 +10,7 @@ using System.Web.Mvc;
 namespace SeminarMVC.Controllers
 {
     [Authorize]
+    [HandleError]
     public class PredbiljezbeController : Controller
     {
         PredbiljezbaREST service = new PredbiljezbaREST();

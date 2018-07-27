@@ -3,7 +3,14 @@
 @{
     ViewBag.Title = "Error";
 }
+<div class="text-center">
+    <h1 class="text-danger text-center">Error.</h1>
+    <h4 class="text-danger text-center">Nažalost desila se pogreška tokom izvršavanja zahtjeva. </h4>
+    @if (Model != null)
+    {
+        <p>[@Model.Exception.Message]</p> <br /> <br />
+    }
+    <a href="~/Upisi/Index" class="btn-lg btn btn-default" >Povratak na Početnu</a>
+</div>
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
 

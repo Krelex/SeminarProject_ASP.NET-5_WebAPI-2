@@ -17,5 +17,14 @@ namespace SeminarMVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_Error(object sender , EventArgs e)
+        {
+            Exception exception = Server.GetLastError();
+
+            Server.ClearError();
+
+            Response.Redirect("~/GlobalneGreske/Index");
+        }
     }
 }
