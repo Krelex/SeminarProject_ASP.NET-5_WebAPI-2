@@ -15,13 +15,29 @@ namespace SeminarMVC.Controllers
         PredbiljezbaREST clientPredbiljezba = new PredbiljezbaREST();
 
         // GET: Upisi
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int? active)
         {
-            var allSeminars =await clientSeminar.GetAllAsync();
+            if (active == 0)
+            {
+                ViewBag.Active = "nonactive";
+                var all = await clientSeminar.GetAllAsync();
+                var chekMe = all.Where(p => p.Popunjen == false).OrderByDescending(p => p.Datum);
+                return View(chekMe);
 
-            var notPopunjen = allSeminars.Where(s => s.Popunjen == false).ToList();
-
-            return View(notPopunjen);
+            }
+            else if (active == 1)
+            {
+                ViewBag.Active = "active";
+                var all = await clientSeminar.GetAllAsync();
+                var checkMe = all.Where(p => p.Popunjen == true).OrderByDescending(p => p.Datum);
+                return View(checkMe);
+            }
+            else
+            {
+                ViewBag.Active = "all";
+                var all = await clientSeminar.GetAllAsync();
+                return View(all.OrderByDescending(p => p.Datum));
+            }
         }
 
         public async Task<ActionResult> Korisnika(int id, string name)

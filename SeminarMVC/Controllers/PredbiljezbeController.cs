@@ -1,4 +1,5 @@
-﻿using SeminarMVC.Models.REST;
+﻿using SeminarMVC.Models;
+using SeminarMVC.Models.REST;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace SeminarMVC.Controllers
     public class PredbiljezbeController : Controller
     {
         PredbiljezbaREST service = new PredbiljezbaREST();
+        SeminarREST serviceSeminar = new SeminarREST();
+
 
         // GET: Predbiljezbe
         public async Task<ActionResult> Index(int? active)
@@ -38,7 +41,42 @@ namespace SeminarMVC.Controllers
 
                 return View(all.OrderByDescending(p => p.Datum));
             }
+        }
 
+
+        public async Task<ActionResult> Edit(int id)
+        {
+            var item = await service.GetByIdAsync(id);
+            var seminari = await serviceSeminar.GetAllAsync();
+
+            List<SelectListItem> listaItema = new List<SelectListItem>();
+
+            foreach (var semi in seminari)
+            {
+                SelectListItem li = new SelectListItem();
+                li.Text = semi.Naziv;
+                li.Value = semi.IdSeminar.ToString();
+                listaItema.Add(li);
+            }
+
+            SelectList lista = new SelectList(listaItema , "Value" , "Text");
+            
+            ViewBag.lista = lista;
+
+            return View(item);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Edit(Predbiljezba predbiljezba)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                TempData["EditP"] = await service.PutAsync(predbiljezba); ;
+                return RedirectToAction("Index");
+            }
+
+            return View(predbiljezba);
         }
     }
 }

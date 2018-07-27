@@ -295,6 +295,7 @@
     <Content Include="Views\Upisi\Korisnika.cshtml" />
     <Content Include="Views\Seminari\Create.cshtml" />
     <Content Include="Views\Seminari\Edit.cshtml" />
+    <Content Include="Views\Predbiljezbe\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

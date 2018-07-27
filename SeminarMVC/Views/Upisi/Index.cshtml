@@ -2,9 +2,33 @@
 
 @{
     ViewBag.Title = "Upis";
+
+    string all = "";
+    string active = "";
+    string nonactive = "";
+
+    if (ViewBag.Active == "all")
+    {
+        all = "active";
+
+    }
+    else if (ViewBag.Active == "active")
+    {
+        active = "active";
+    }
+    else if (ViewBag.Active == "nonactive")
+    {
+        nonactive = "active";
+    }
 }
 
-<h4 class="text-center">Seminari sa slobodnim mjestima.</h4>
+<h4 class="text-center">Popis seminara.</h4>
+<hr />
+<div class="btn-group btn-group-justified" role="group">
+    <a class="btn btn-default @all" href="~/Upisi/Index">All</a>
+    <a class="btn btn-default @active" href="~/Upisi/index?active=1">Full</a>
+    <a class="btn btn-default @nonactive" href="~/Upisi/index?active=0">Empty</a>
+</div>
 <hr />
 
 <table class="table table-striped table-bordered">

@@ -39,16 +39,11 @@ namespace SeminarAPI.Controllers
 
         // PUT: api/Predbiljezbas/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPredbiljezba(int id, Predbiljezba predbiljezba)
+        public IHttpActionResult PutPredbiljezba([FromBody]Predbiljezba predbiljezba)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-
-            if (id != predbiljezba.IdPredbiljezba)
-            {
-                return BadRequest();
             }
 
             db.Entry(predbiljezba).State = EntityState.Modified;
@@ -59,7 +54,7 @@ namespace SeminarAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PredbiljezbaExists(id))
+                if (!PredbiljezbaExists(predbiljezba.IdPredbiljezba))
                 {
                     return NotFound();
                 }
