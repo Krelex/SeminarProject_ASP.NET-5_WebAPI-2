@@ -44,6 +44,19 @@ namespace SeminarMVC.Controllers
             }
         }
 
+        public async Task<ActionResult> Search(string key)
+        {
+            var all = await service.GetAllAsync();
+            var found = all.Where(p => p.Email.Contains(key)).ToList();
+
+            if (found.Count() == 0)
+            {
+                throw new ArgumentException("Nažalost unjeli ste netočne podatke :( ");
+            }
+
+            return View("Index", found);
+
+        }
 
         public async Task<ActionResult> Edit(int id)
         {

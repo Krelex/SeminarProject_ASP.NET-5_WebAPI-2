@@ -74,5 +74,15 @@ namespace SeminarMVC.Models.REST
                 return rezult;
             }
         }
+
+        public async Task<IEnumerable<Predbiljezba>> SearchAsync(string key)
+        {
+            using (var client = new HttpClient())
+            {
+                var rezult = JsonConvert.DeserializeObject<IEnumerable<Predbiljezba>>(await client.GetStringAsync(uri + "Predbiljezba/Search/" + key));
+
+                return rezult;
+            }
+        }
     }
 }

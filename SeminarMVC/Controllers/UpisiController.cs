@@ -41,6 +41,19 @@ namespace SeminarMVC.Controllers
             }
         }
 
+        public async Task<ActionResult> Search(string key)
+        {
+            var found = await clientSeminar.SearchAsync(key);
+
+            if (found.Count() == 0)
+            {
+                throw new ArgumentException("Nažalost unjeli ste netočne podatke :( ");
+            }
+
+            return View("Index", found);
+
+        }
+
         public async Task<ActionResult> Korisnika(int id, string name)
         {
             ViewBag.SeminarId = id;

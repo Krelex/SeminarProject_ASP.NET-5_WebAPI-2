@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -99,6 +100,20 @@ namespace SeminarAPI.Controllers
             db.SaveChanges();
 
             return Ok(seminar);
+        }
+
+        [ResponseType(typeof(List<Seminar>))]
+        [Route("~/api/Seminar/Search/{Id}")]
+        [HttpGet]
+        public IHttpActionResult Search(string id)
+        {
+            List<Seminar> rezult = db.Seminars.Where(s => s.Naziv.Contains(id)).ToList();
+            if (rezult.Count == 0)
+            {
+                return NotFound();
+            }
+            
+            return Ok(rezult);
         }
 
         private bool SeminarExists(int id)

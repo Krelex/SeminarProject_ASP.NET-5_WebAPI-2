@@ -25,6 +25,19 @@ namespace SeminarMVC.Controllers
             return View(all);
         }
 
+        public async Task<ActionResult> Search(string key)
+        {
+            var found = await serviceSeminar.SearchAsync(key);
+
+            if (found.Count() == 0)
+            {
+                throw new ArgumentException("Nažalost unjeli ste netočne podatke :( ");
+            }
+
+            return View("Index", found);
+
+        }
+
         public async Task<ActionResult> Edit(int id)
         {
             var seminar = await serviceSeminar.GetByIdAsync(id);

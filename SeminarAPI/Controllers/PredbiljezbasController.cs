@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using SeminarAPI.Models;
+using System.Data.SqlClient;
 
 namespace SeminarAPI.Controllers
 {
@@ -108,7 +109,23 @@ namespace SeminarAPI.Controllers
             return Ok(broj);
         }
 
-        protected override void Dispose(bool disposing)
+        [ResponseType(typeof(List<Predbiljezba>))]
+        [Route("~/api/Predbiljezba/Search/{Id}")]
+        [HttpGet]
+        public IHttpActionResult Search(string id)
+        {
+            List<Predbiljezba> rezult = db.Predbiljezbas.Include("Seminar").Where(s => s.Email.Contains(id)).ToList();
+            if (rezult.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(rezult);
+        }
+
+
+
+    protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
