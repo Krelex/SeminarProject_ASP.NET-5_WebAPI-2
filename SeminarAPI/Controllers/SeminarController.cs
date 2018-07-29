@@ -96,8 +96,17 @@ namespace SeminarAPI.Controllers
                 return NotFound();
             }
 
-            db.Seminars.Remove(seminar);
+            var remP = db.Predbiljezbas.Where(p => p.IdSeminar == id).ToList();
+            var remS = db.Seminars.Where(p => p.IdSeminar == id).Single();
+
+            foreach (var item in remP)
+            {
+                db.Predbiljezbas.Remove(item);
+            }
+
+            db.Seminars.Remove(remS);
             db.SaveChanges();
+
 
             return Ok(seminar);
         }

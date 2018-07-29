@@ -92,9 +92,9 @@ namespace SeminarMVC.Controllers
         }
 
         [HttpGet]
-        public ActionResult Delete(int id, string naziv)
+        public async  Task<ActionResult> Delete(int id, string naziv)
         {
-            serviceSeminar.DeleteAsync(id);
+            var rezult = await serviceSeminar.DeleteAsync(id);
 
             TempData["Delete"] = naziv;
 

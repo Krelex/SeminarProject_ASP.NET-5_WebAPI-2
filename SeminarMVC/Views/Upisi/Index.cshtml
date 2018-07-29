@@ -22,7 +22,23 @@
     }
 }
 
-<h4 class="text-center">Popis seminara.</h4>
+<div class="row">
+    <div class="col-md-3 col-sm-4">
+                    @using (Html.BeginForm("Search", "Seminari", FormMethod.Get))
+                    { 
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Pretraži :</button>
+                            </span>
+                            <input type="text" name="Key" class="form-control" placeholder="Pretraži seminar...">
+                        </div>
+                    }
+    </div>
+    <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1">
+        <h4 class="text-left ">Popis seminara.</h4>
+    </div>
+</div>
+
 <hr />
 <div class="btn-group btn-group-justified" role="group">
     <a class="btn btn-default @all" href="~/Upisi/Index">All</a>
