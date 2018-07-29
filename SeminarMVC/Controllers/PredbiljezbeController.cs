@@ -54,6 +54,8 @@ namespace SeminarMVC.Controllers
                 throw new ArgumentException("Nažalost unjeli ste netočne podatke :( ");
             }
 
+            ViewBag.Key = key;
+
             return View("Index", found);
 
         }

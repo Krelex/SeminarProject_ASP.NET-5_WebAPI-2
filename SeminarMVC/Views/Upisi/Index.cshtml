@@ -24,7 +24,7 @@
 
 <div class="row">
     <div class="col-md-3 col-sm-4">
-                    @using (Html.BeginForm("Search", "Seminari", FormMethod.Get))
+                    @using (Html.BeginForm("Search", "Upisi", FormMethod.Get))
                     { 
                         <div class="input-group">
                             <span class="input-group-btn">
@@ -37,6 +37,12 @@
     <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1">
         <h4 class="text-left ">Popis seminara.</h4>
     </div>
+    @if (ViewBag.Key != null)
+    {
+        <div>
+            <h5 class="text-center">Rezultati pretrage:"<span style="color: red">@ViewBag.Key</span>"</h5>
+        </div>
+    }
 </div>
 
 <hr />

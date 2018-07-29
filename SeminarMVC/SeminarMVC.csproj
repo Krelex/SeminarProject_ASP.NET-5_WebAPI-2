@@ -297,6 +297,8 @@
     <Content Include="Views\Seminari\Create.cshtml" />
     <Content Include="Views\Seminari\Edit.cshtml" />
     <Content Include="Views\Predbiljezbe\Edit.cshtml" />
+    <Content Include="Views\Upisi\Search.cshtml" />
+    <Content Include="Views\Seminari\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

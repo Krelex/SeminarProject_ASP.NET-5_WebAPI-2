@@ -6,38 +6,12 @@
         string color = ""; 
     }
 
-
-
-<div class="row">
-    <div class="col-md-3 col-sm-4">
-        @using (Html.BeginForm("Search", "Seminari", FormMethod.Get))
-        {
-            <div class="input-group">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit">Pretraži :</button>
-                </span>
-                <input type="text" name="Key" class="form-control" placeholder="Pretraži seminar...">
-            </div>
-        }
+    <h4 class="text-center">Rezultati pretrage : "<span style="color: red">@ViewBag.Search</span>"</h4>
+    <hr />
+    <div class="text-center">
+         <a style="" class="btn btn-success btn" href="~/Seminari/Create">Novi Seminar</a> 
     </div>
-    <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1">
-        <h4 class="text-left ">Popis seminara.</h4>
-    </div>
-    @if (ViewBag.Key != null)
-    {
-        <div>
-            <h5 class="text-center">Rezultati pretrage:"<span style="color: red">@ViewBag.Key</span>"</h5>
-        </div>
-    }
-</div>
-
-
-
-<hr />
-<div class="text-center">
-    <a style="" class="btn btn-success btn" href="~/Seminari/Create">Novi Seminar</a>
-</div>
-<hr />
+    <hr />
 
     <table class="table table-bordered">
         <thead>
