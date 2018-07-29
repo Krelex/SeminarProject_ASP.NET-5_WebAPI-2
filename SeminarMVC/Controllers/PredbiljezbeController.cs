@@ -87,8 +87,8 @@ namespace SeminarMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-                TempData["EditP"] = await service.PutAsync(predbiljezba); ;
+                await service.PutAsync(predbiljezba);
+                TempData["EditP"] = predbiljezba.Email ;
                 return RedirectToAction("Index");
             }
 
