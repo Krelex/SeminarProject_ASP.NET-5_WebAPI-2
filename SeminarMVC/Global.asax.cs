@@ -18,13 +18,13 @@ namespace SeminarMVC
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        //protected void Application_Error(object sender , EventArgs e)
-        //{
-        //    Exception exception = Server.GetLastError();
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            Exception exception = Server.GetLastError();
 
-        //    Server.ClearError();
+            Server.ClearError();
 
-        //    Response.Redirect("~/GlobalneGreske/Index");
-        //}
+            Response.Redirect("~/GlobalneGreske/Index");
+        }
     }
 }
