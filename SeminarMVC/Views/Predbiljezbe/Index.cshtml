@@ -1,4 +1,6 @@
-﻿@model IEnumerable<SeminarMVC.Models.Predbiljezba>
+﻿@using SeminarMVC.PagingHelper;
+
+@model SeminarMVC.Models.PredbiljezbaViewModel
 @{
     ViewBag.Title = "Index";
     var check ="";
@@ -20,6 +22,7 @@
     }
 
    }
+
 
 <div class="row">
     <div class="col-md-3 col-sm-4">
@@ -66,7 +69,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.predbiljezba)
             {
             <tr>
                 <td class="text-center">
@@ -103,3 +106,28 @@
         }
     </tbody>
 </table>
+
+<div class="text-center">
+
+</div>
+
+@if (Model.pagingInfo != null)
+{
+    <nav aria-label="Page navigation" class="text-center">
+        <ul class="pagination ">
+            @if (Request.QueryString["active"] == null)
+            {
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("Index", new { Page = x }))
+            }
+            else if (Request.QueryString["active"].ToString() == "0")
+            {
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("Index", new { Page = x, active = 0 }))
+            }
+            else if (Request.QueryString["active"].ToString() == "1")
+            {
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("Index", new { Page = x, active = 1 }))
+            }
+        </ul>
+    </nav>
+}
+

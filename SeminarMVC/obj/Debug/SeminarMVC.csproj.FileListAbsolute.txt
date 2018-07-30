@@ -40,6 +40,11 @@ C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSemin
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Newtonsoft.Json.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Owin.dll
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.dll
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.Extensions.dll
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.Formatting.dll
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.Primitives.dll
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.WebRequest.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.Helpers.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.Mvc.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.Optimization.dll
@@ -54,6 +59,9 @@ C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSemin
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.ApplicationInsights.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Newtonsoft.Json.xml
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.xml
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.WebRequest.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.Helpers.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.Mvc.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.Optimization.xml
@@ -62,7 +70,6 @@ C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSemin
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.WebPages.Deployment.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Web.WebPages.Razor.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Antlr3.Runtime.pdb
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Newtonsoft.Json.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\EntityFramework.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.AspNet.Identity.Core.xml
@@ -77,13 +84,6 @@ C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSemin
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.csprojResolveAssemblyReference.cache
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.dll
 C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.pdb
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.dll
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.Extensions.dll
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.Formatting.dll
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.Primitives.dll
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.WebRequest.dll
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.xml
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\bin\System.Net.Http.WebRequest.xml
-C:\Users\andre\Desktop\Project\ASP.NET_MVC_Filip_Cogelja\Aplikacija\AlgebraSeminar\SeminarMVC\obj\Debug\SeminarMVC.csprojResolveAssemblyReference.cache
