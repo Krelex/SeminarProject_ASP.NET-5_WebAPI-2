@@ -1,4 +1,5 @@
-﻿@model IEnumerable<SeminarMVC.Models.Seminar>
+﻿@using SeminarMVC.PagingHelper;
+@model SeminarMVC.Models.SeminarViewModel
 
     @{
         ViewBag.Title = "Index";
@@ -51,7 +52,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var seminar in Model)
+            @foreach (var seminar in Model.seminar)
             {
                 if (seminar.Popunjen == true)
                 { color = "#f9f9f9"; }
@@ -88,6 +89,26 @@
             }
         </tbody>
     </table>
+
+@if (Model.pagingInfo != null)
+{
+    <nav aria-label="Page navigation" class="text-center">
+        <ul class="pagination ">
+            @if (Request.QueryString["active"] == null)
+            {
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("Index", new { Page = x }))
+            }
+            else if (Request.QueryString["active"].ToString() == "0")
+            {
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("Index", new { Page = x, active = 0 }))
+            }
+            else if (Request.QueryString["active"].ToString() == "1")
+            {
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("Index", new { Page = x, active = 1 }))
+            }
+        </ul>
+    </nav>
+}
 
 <script>
     var element = document.querySelectorAll('.obrisi');

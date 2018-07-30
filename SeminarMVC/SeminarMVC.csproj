@@ -231,6 +231,7 @@
     <Compile Include="Models\REST\PredbiljezbaREST.cs" />
     <Compile Include="Models\REST\SeminarREST.cs" />
     <Compile Include="Models\Seminar.cs" />
+    <Compile Include="Models\SeminarViewModel.cs" />
     <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="PagingHelper\PagingHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

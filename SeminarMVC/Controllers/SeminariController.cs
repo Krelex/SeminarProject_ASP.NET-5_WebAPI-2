@@ -16,17 +16,30 @@ namespace SeminarMVC.Controllers
     {
 
         SeminarREST serviceSeminar = new SeminarREST();
+        int pageSize = 5;
 
         // GET: Seminari
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int page = 1)
         {
-            var all = await serviceSeminar.GetAllAsync();
+            SeminarViewModel model = new SeminarViewModel();
 
-            return View(all);
+            var all = await serviceSeminar.GetAllAsync();
+            var checkMe = all.OrderByDescending(p => p.Datum).Skip((page - 1) * pageSize).Take(pageSize);
+            model.seminar = checkMe;
+
+            model.pagingInfo = new PagingInfo()
+            {
+                TotalItems = all.Count(),
+                ItemPerPage = pageSize,
+                CurrentPage = page
+            };
+
+            return View(model);
         }
 
         public async Task<ActionResult> Search(string key)
         {
+            SeminarViewModel model = new SeminarViewModel();
             var found = await serviceSeminar.SearchAsync(key);
 
             if (found.Count() == 0)
@@ -34,8 +47,9 @@ namespace SeminarMVC.Controllers
                 throw new ArgumentException("Nažalost unjeli ste netočne podatke :( ");
             }
             @ViewBag.Key = key;
+            model.seminar = found;
 
-            return View("Index", found);
+            return View("Index", model);
 
         }
 
