@@ -1,6 +1,10 @@
 ## How to use :
 Download or clone repo, start it with ViusalStudio, set it as StartUp project and start debuging
 
+SeminarApi - https://seminarapi.azurewebsites.net/api/
+
+SeminarMVC - http://algebra-seminar.azurewebsites.net/
+
 ## Description :
 Project created for Algebra final assignment. SeminarAPI is restfull service and SeminarMVC is application with business logic.
 Database created with SQL Server (T-SQL). Attached to SeminarAPI via Entity Framework 'Code First-Existing Database'.
@@ -9,6 +13,12 @@ For fetching/puting data from/to api used System.Net.Http and for serialization/
 
 
 Its contain 2 Parts:
-
 * Part 1 "SeminarAPI": WebAPI 2
 * Part 2 "SeminarMVC": ASP.NET MVC 5 | Bootstrap 3.3 
+
+## SeminarApi Description :
+
+
+All API access is over HTTP , and accessed from ``` https://seminarapi.azurewebsites.net/api/ ``` all data is sent and received as JSON.
+
+
