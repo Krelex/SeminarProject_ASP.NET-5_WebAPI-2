@@ -18,7 +18,74 @@ Its contain 2 Parts:
 
 ## SeminarApi Description :
 
+### Schema
 
 All API access is over HTTP , and accessed from ``` https://seminarapi.azurewebsites.net/api/ ``` all data is sent and received as JSON.
 
+### Resource
+
+Resource which this api is serving are  ``` /Seminar ``` and ``` /Predbiljezbas ``` .
+
+#### Seminar description :
+
+* IdSeminar : int
+* Naziv : String
+* Opis : String
+* Datum : DateTime
+* Popounjent : bool
+* IdSeminar : int
+* Predbiljezbas : IEnumerable<Predbiljezbas>
+  
+  
+#### Predbiljezbas description :
+
+* IdPredbiljezba : int
+* Ime : String
+* Prezime : String
+* Email : String
+* Prezime : String
+* Telefon : String
+* Datum : DateTime
+* Active : bool
+* IdSeminar : int
+
+
+#### To GRAB list of Resource use :
+```
+GET api/{ResourceName}
+```
+
+#### To GRAB uniqe Resource use :
+```
+GET api/{ResourceName}/{id}
+```
+
+#### To EDIT Resource use :
+```
+PUT api/{ResourceName}/{id}
+```
+
+#### To ADD Resource use :
+```
+POST api/{ResourceName}
+```
+#### To DELETE Resource use :
+```
+DELETE api/{ResourceName}/{id}
+```
+
+#### To SEARCH Resource use :
+```
+GET api/{ResourceName}/Search/{string}
+```
+
+#### To SEARCH Resource use :
+```
+GET api/{ResourceName}/Search/{string}
+```
+
+#### To GET number of Polaznika in Predbiljezba use :
+```
+GET api/Predbiljezbas/{id}/PolaznikaCount
+```
 
